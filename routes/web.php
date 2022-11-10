@@ -18,11 +18,18 @@ use \RouterOS\Query;
 Route::get('/', function () {
 
 // Initiate client with config object
-$client = new Client([
+$client2 = new Client([
     'host' => '172.16.20.1',
     'user' => 'adm',
     'pass' => 'NOCsisfokom08',
     'port' => 19745,
+]);
+
+$client = new Client([
+    'host' => '192.168.52.1',
+    'user' => 'adm',
+    'pass' => '',
+    'port' => 8728,
 ]);
 
 // Create "where" Query object for RouterOS
